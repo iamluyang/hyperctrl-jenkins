@@ -8,8 +8,8 @@ class Git implements Serializable {
         this.script = script
     }
 
-    def checkout(String credentialsId, String repo) {
-        this.script.git credentialsId: credentialsId, url: repo
+    def checkout(String repositoryUrl, String credentialsId) {
+        this.script.git credentialsId: credentialsId, url: repositoryUrl
     }
 
     String commitHash() {
